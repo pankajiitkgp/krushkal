@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Krushkal Algorithm | Minimum spanning tree (MST)</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <meta name="description" content="A MST or minimum weight spanning tree for a weighted, connected and undirected graph is a spanning tree with weight less than or equal to the weight of every other spanning tree." />
+  <meta name="keywords" content="Krushkal Algorithm, Javascript,  Minimum spanning tree (MST), MST, Pankaj Sarkar, Greedy algo, Krushkal, Netwrok drawing, Finding MST, connected and undirected graph, minimum cost, weights, edge, nodes" />
+
+  <link rel="shortcut icon" href="assets/img/logo.png">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <style>
+    .val_input {
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-fixed-top navbar-inverse o-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="color: #fff;">Krushkal Algorithm</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li>
+            <a href="krushkal.html" style="color:white;">Krushkal MST</a>
+          </li>
+          <li class="active">
+            <a href="#" style="color:white;">Example</a>
+          </li>
+          <li>
+            <a href="" data-toggle="modal" data-target="#help_modal" style="color:white;">Information</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="content" class="">
+      <div id="homed" class="row">
+        <div class="col-md-12">
+
+          <div class="col-md-6" style="padding:0;padding-right: 10px;">
+            <div class="panel panel-default card shadow--2dp">
+              <div class="panel-heading o-nav">
+                <h3 class="panel-title">Data</h3>
+              </div>
+              <div class="panel-body" style="padding: 15px;">
+
+                <div class="col-md-12">
+                  <form id="reactor" name="" class="form-group" style="margin-bottom: 0px;">
+                    <div class="input-group" style="margin-bottom: 10px;">
+                      <span class="input-group-addon">Select number of nodes in Netwrok</span>
+                      <select id="rows" name="rows" class="form-control" disabled>
+                        <option>Select</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option selected>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                      </select>
+                    </div>
+
+                    <table id="tbl" class="table table-bordered" style="margin-bottom: 10px;">
+                      <tr></tr>
+                    </table>
+                    <div class="input-group" style="display: block; text-align: center">
+                      <a type="button" class="btn" href="krushkal.html">Try with own inputs!</a>
+                    </div>
+
+                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+
+                    <div>
+                      <h4 class="text-center" style="text-decoration: underline">MST Output</h4>
+                      <p id="output">
+                        Minimum spanning tree (MST) of the input network is given below:<br>
+                        <span>Node A --> Node B | Cost: 2</span><br>
+                        <span>Node A --> Node D | Cost: 6</span><br>
+                        <span>Node B --> Node C | Cost: 3</span><br>
+                        <span>Node B --> Node E | Cost: 5</span><br>
+                        <span><b>Minimum cost for MST: 16</b></span>
+                      </p>
+                    </div>
+
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" style="padding:0;">
+            <div class="panel panel-default card shadow--2dp">
+              <div class="panel-heading o-nav">
+                <h3 class="panel-title">Netwok</h3>
+              </div>
+              <div class="panel-body" style="padding: 15px;">
+                <div id="network"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="footer-copyright text-left">
+            Last modified: 15/05/2020 | <strong> Under development</strong>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="footer-copyright text-right">
+            Developed with <span class="glyphicon glyphicon-heart" style="color: red" aria-hidden="true"></span> by
+            <a target="_blank" href="https://www.linkedin.com/in/sarkarpankaj/" style="color:#fff">Pankaj Sarkar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Help modal -->
+  <div id="help_modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header o-nav">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Information</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>
+              Project created for finding Minimum spanning tree (MST) using Krushkal Algorithm. An example has been illustrated in example page.
+            </li>
+            <li>
+              A MST or minimum weight spanning tree for a weighted, connected and undirected graph is a spanning tree with weight less than or equal to the weight of every other spanning tree.
+            </li>
+            <li>
+              Algorithm can be used for any number of nodes in a network. However, for simplicity dropdown menu given for number of node selection.
+            </li>
+            <li>
+              For finding MST, select the number of nodes in your network, enter weights for each edge. Click <code>Find MST</code> button to get the output with results and netw
+            </li>
+            <li>
+              In the output network, edges with <code>red color</code> showing the MST of the given network.
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal">Back</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src="assets/js/jquery-2.1.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/vis-network.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <script>
+    var edges = [
+      [Infinity, 2, Infinity, 6, Infinity],
+      [2, Infinity, Infinity, 6, Infinity],
+      [Infinity, 3, Infinity, Infinity, 7],
+      [6, 8, Infinity, Infinity, 9],
+      [Infinity, 5, 7, 9, Infinity]
+    ];
+    matrix_dimension();
+    addvalue(edges);
+    $("#rows").change(function() {
+      matrix_dimension();
+    });
+    krushkal(edges, rows);
+    networkdraw(edges);
+
+  </script>
+
+</body>
+
+</html>
