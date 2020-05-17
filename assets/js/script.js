@@ -210,15 +210,6 @@ function printMST() {
 }
 
 function findMSTbtn() {
-  //var selectindex = document.getElementById("rows").selectedIndex;
-  //  if (selectindex == 0) {
-  //    console.log("OK");
-  //    //alert("Enter");
-  //    return;
-  //  } else {
-  //    console.log("NO");
-  //    return;
-  //  }
 
   let error = document.getElementById('error');
   let selectindex = document.getElementById("rows").selectedIndex;
