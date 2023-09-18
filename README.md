@@ -5,3 +5,5 @@
 * Algorithm can be used for any number of nodes in a network. However, for simplicity dropdown menu given for number of node selection.
 * For finding MST, select the number of nodes in your network, enter weights for each edge. Click Find MST button to get the output with results and netw
 * In the output network, edges with red color showing the MST of the given network.
+
+To visit: https://pankajiitkgp.github.io/krushkal
